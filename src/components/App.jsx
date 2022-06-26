@@ -1,8 +1,9 @@
 import { ProfileCard } from "./ProfileCard/ProfileCard";
+import user from "../data/user.json";
 
 export const App = () => {
   return (
-    <div
+    <main
       style={{
         height: '100vh',
         display: 'flex',
@@ -12,7 +13,7 @@ export const App = () => {
         color: '#010101'
       }}
     >
-      <ProfileCard/>
-    </div>
+      <ProfileCard user={user} />
+    </main>
   );
 };
