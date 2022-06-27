@@ -3,14 +3,14 @@ import { ProfileStatsBar } from "components/ProfileStatsBar/ProfileStatsBar";
 import PropTypes from 'prop-types';
 import { Box } from "components/Box";
 
-export const ProfileCard = ({user}) => {
+export const ProfileCard = ({ user }) => {
     return (
         <Box>
             <ProfileInfo username={user.username} tag={user.tag} location={user.location} avatar={user.avatar} />
             <ProfileStatsBar stats={user.stats} />
         </Box>
     );
-}
+};
 
 ProfileCard.propTypes = {
     user: PropTypes.exact({

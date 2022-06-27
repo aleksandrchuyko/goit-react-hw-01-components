@@ -4,7 +4,7 @@ export const UserPhoto = styled.img.attrs(props => ({
     src: props.avatar,
     alt: props.alt
 }))`
-width: 300px;
+width: 100px;
 `;
 
 export const UserTag = styled.p`
