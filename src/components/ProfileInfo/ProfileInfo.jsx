@@ -1,16 +1,16 @@
 import PropTypes from 'prop-types';
-import { UserTag, UserPhoto } from './ProfileInfo.styled';
+import { UserTag, UserPhoto, UserName, UserLocation } from './ProfileInfo.styled';
 import { Box } from 'components/Box';
 
 export const ProfileInfo = ({ username, tag, location, avatar }) => {
     return (
         <Box>
             <UserPhoto avatar={avatar} alt="user photo"/>
-            <p>{username}</p>
+            <UserName>{username}</UserName>
             <UserTag>
                 @{tag}
             </UserTag>
-            <p>{location}</p>
+            <UserLocation>{location}</UserLocation>
         </Box>
     );
 };

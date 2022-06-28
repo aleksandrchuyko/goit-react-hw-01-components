@@ -1,24 +1,24 @@
 import PropTypes from 'prop-types';
 import {getRandomHexColor} from '../../utils/index';
 import { Box } from "components/Box";
-import { StatsTitle, StatItem } from './Statistics.styled';
+import { StatsTitle, StatsList ,StatItem, Label, Percents } from './Statistics.styled';
 
 export const Statistic = ({title, data }) => {
     return (
-        <Box as='section'>
+        <Box as='section' width="310px">
             {title && (<StatsTitle>{title}</StatsTitle>)}
-            <ul>
+            <StatsList>
                 {data.map(item => {
                     return (
                         <StatItem key={item.id} style={{
                             backgroundColor: getRandomHexColor()
                         }} >
-                            <span >{item.label}</span>
-                            <span>{item.percentage}%</span>
+                            <Label >{item.label}</Label>
+                            <Percents>{item.percentage}%</Percents>
                         </StatItem>
                     );
                 })}
-            </ul>
+            </StatsList>
         </Box>
     );
 };

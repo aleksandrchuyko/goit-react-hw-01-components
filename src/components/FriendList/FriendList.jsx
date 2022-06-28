@@ -1,19 +1,19 @@
-import { FriendInfo , StatusOnline} from './FriendList.styled'; 
+import { FriendsBar, FriendInfo , StatusOnline, Avatar, Name} from './FriendList.styled'; 
 import PropTypes from 'prop-types';
 
 export const FriendList = ({ friends }) => {
     return (
-        <ul>
+        <FriendsBar>
             {friends.map(friend => {
                 return (
                     <FriendInfo key={friend.id}>
                         <StatusOnline isOnline={friend.isOnline}>&nbsp; &nbsp; &nbsp;</StatusOnline>
-                        <img src={friend.avatar} alt="User avatar" width="48" />
-                        <p>{friend.name}</p>
+                        <Avatar src={friend.avatar} alt="User avatar" width="48" />
+                        <Name>{friend.name}</Name>
                     </FriendInfo>
                 );
             })}
-        </ul>
+        </FriendsBar>
     );
 };
 

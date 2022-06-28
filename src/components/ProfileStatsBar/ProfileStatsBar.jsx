@@ -1,23 +1,22 @@
 import PropTypes from 'prop-types';
+import { ListOfStats, Stat, StatTitle, StatValue } from './ProfileStatsBar.styled';
 
 export const ProfileStatsBar = ({ stats }) => {
     return (
-        <>
-            <ul>
-                <li>
-                    <span>Followers</span>
-                    <span>{stats.followers}</span>
-                </li>
-                <li>
-                    <span>Views</span>
-                    <span>{stats.views}</span>
-                </li>
-                <li>
-                    <span>Likes</span>
-                    <span>{stats.likes}</span>
-                </li>
-            </ul>
-        </>
+            <ListOfStats>
+                <Stat>
+                    <StatTitle>Followers</StatTitle>
+                    <StatValue>{stats.followers}</StatValue>
+                </Stat>
+                <Stat>
+                    <StatTitle>Views</StatTitle>
+                    <StatValue>{stats.views}</StatValue>
+                </Stat>
+                <Stat>
+                    <StatTitle>Likes</StatTitle>
+                    <StatValue>{stats.likes}</StatValue>
+                </Stat>
+            </ListOfStats>
     );
 };
 

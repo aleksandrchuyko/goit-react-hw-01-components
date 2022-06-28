@@ -2,10 +2,11 @@ import { ProfileInfo } from "components/ProfileInfo/ProfileInfo";
 import { ProfileStatsBar } from "components/ProfileStatsBar/ProfileStatsBar";
 import PropTypes from 'prop-types';
 import { Box } from "components/Box";
+import { theme } from "constants";
 
 export const ProfileCard = ({ user }) => {
     return (
-        <Box>
+        <Box width="210px" p={2} border={theme.borders.normal} display="flex" flexDirection="column" alignItems="center">
             <ProfileInfo username={user.username} tag={user.tag} location={user.location} avatar={user.avatar} />
             <ProfileStatsBar stats={user.stats} />
         </Box>
